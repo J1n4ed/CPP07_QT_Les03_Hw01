@@ -6,43 +6,62 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>602</width>
-    <height>388</height>
+    <width>601</width>
+    <height>408</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Генератор строк</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QGroupBox" name="groupBox">
-      <property name="title">
-       <string>Данные для подключения</string>
+     <widget class="QLabel" name="label">
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
-      <widget class="QTextEdit" name="txt_results">
-       <property name="geometry">
-        <rect>
-         <x>12</x>
-         <y>33</y>
-         <width>547</width>
-         <height>186</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-      </widget>
+      <property name="text">
+       <string>Строка подключения:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="txt_results">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="sizeIncrement">
+       <size>
+        <width>1</width>
+        <height>1</height>
+       </size>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
      </widget>
     </item>
     <item>
      <widget class="QPushButton" name="pb_generate">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Сгенерировать строку подключения из введённых данных&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
       <property name="text">
        <string>&amp;Сгенерировать запрос</string>
       </property>
@@ -50,6 +69,9 @@
     </item>
     <item>
      <widget class="QPushButton" name="pb_update">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Обновить содержимое окна отображения&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
       <property name="text">
        <string>&amp;Обновить</string>
       </property>
@@ -57,6 +79,9 @@
     </item>
     <item>
      <widget class="QPushButton" name="pb_exit">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выйти из программы&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
       <property name="text">
        <string>&amp;Выход</string>
       </property>
@@ -69,7 +94,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>602</width>
+     <width>601</width>
      <height>23</height>
     </rect>
    </property>
@@ -77,9 +102,13 @@
     <property name="title">
      <string>&amp;Меню</string>
     </property>
+    <addaction name="action_2"/>
+    <addaction name="action_3"/>
     <addaction name="action"/>
     <addaction name="separator"/>
+    <addaction name="separator"/>
     <addaction name="actionAbout"/>
+    <addaction name="separator"/>
    </widget>
    <addaction name="menu"/>
   </widget>
@@ -100,12 +129,27 @@
     <string>Информация об авторе программы</string>
    </property>
   </action>
+  <action name="action_2">
+   <property name="text">
+    <string>Сгенерировать</string>
+   </property>
+   <property name="toolTip">
+    <string>Сгенерировать строку подключения</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>Обновить</string>
+   </property>
+   <property name="toolTip">
+    <string>Обновить окно отобращения</string>
+   </property>
+  </action>
  </widget>
  <tabstops>
   <tabstop>pb_generate</tabstop>
   <tabstop>pb_update</tabstop>
   <tabstop>pb_exit</tabstop>
-  <tabstop>txt_results</tabstop>
  </tabstops>
  <resources/>
  <connections/>

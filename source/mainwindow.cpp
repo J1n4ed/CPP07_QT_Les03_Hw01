@@ -52,3 +52,15 @@ void MainWindow::on_pb_exit_clicked()
     this->close();
 }
 
+
+void MainWindow::on_action_2_triggered()
+{
+    on_pb_generate_clicked();
+}
+
+
+void MainWindow::on_action_3_triggered()
+{
+    on_pb_update_clicked();
+}
+
